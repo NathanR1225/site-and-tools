@@ -1,18 +1,21 @@
-import "./App.css";
-import ReactDOM from "react-dom/client";
+import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState} from "react";
 import { Home } from "./pages/Home";
 import { ToolBar } from "./utils/ToolBar";
 
 function App() {
+  const [toolBarWidth, setToolBarWidth] = useState(250);
   return (
-    <div>
-      <ToolBar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-        </Routes>
-      </BrowserRouter>
+    <div className="justifyLeft">
+      <ToolBar width={toolBarWidth} />
+      <div style={{ width: `calc(100VW - ${toolBarWidth}px)` }}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
