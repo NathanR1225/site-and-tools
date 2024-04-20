@@ -162,9 +162,6 @@ body {
 /*********************************************************************************************************************************************************************************/
 
 .toolBarContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   background-color: var(--bodyColor);
   backdrop-filter: blur(8px);
   color: var(--textColor);
@@ -179,6 +176,21 @@ body {
   padding:5px;
   text-align: center;
   border-bottom: 1px solid var(--borderColor);
+}
+
+.toolbarFooter {
+  height: 50px;
+  width: 100%;
+  color: var(--textColor);
+  font-size: 12px;
+  padding:5px;
+  text-align: center;
+  border-top: 1px solid var(--borderColor);
+}
+
+.toolBarItemContainer {
+  padding-top: 15px;
+  height: calc(100vh - 150px)
 }
 
 .leftToolItem {

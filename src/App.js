@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="justifyLeft">
       <ToolBar width={toolBarWidth} />
-      <div style={{ width: `calc(100VW - ${toolBarWidth}px)` }}>
+      <div style={{ width: `calc(100VW - ${toolBarWidth}px)`, height:'100vh', overflow:'scroll' }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />}></Route>
