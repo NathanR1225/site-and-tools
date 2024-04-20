@@ -188,21 +188,33 @@ body {
   border-top: 1px solid var(--borderColor);
 }
 
+.toolbarFooterSelected {
+  @extend .toolbarFooter;
+  background-image: var(--selected)
+}
+
 .toolBarItemContainer {
   padding-top: 15px;
   height: calc(100vh - 150px)
 }
 
 .leftToolItem {
-  width:17%;
-  border: 1px solid var(--borderColor);
-  padding: 10px 0px 10px 0px;
+  width:50px;
+  padding: 5px;
+  background-color: var(--bodyColor);
 }
 
-.rightToolItem {
-  width: 80%;
+.baseToolItem {
+  @extend .justifyLeft;
+  width: 90%;
+  user-select: none;
   border: 1px solid var(--borderColor);
-  padding: 10px 0px 10px 20px;
+}
+
+.baseToolItemSelected {
+  @extend .baseToolItem;
+  background-image: var(--selected);
+  border: 0px solid var(--borderColor);
 }
 
 
