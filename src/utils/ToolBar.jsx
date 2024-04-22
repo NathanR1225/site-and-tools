@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import home from "../images/547d0d138096fa3b8a356c3da278f9b8.jpg";
+import home from "../images/home.png";
 
 export function ToolBar({ width }) {
   const nav = useNavigate();
@@ -44,7 +44,7 @@ export function ToolBar({ width }) {
             }
           >
             <div className="leftToolItem">
-              <img scr={home} alt="No" style={{ width: "25px" }} />
+              <img src='../images/home.png' alt="No" style={{ width: "25px" }} />
             </div>
             <div style={{height:'100%', paddingTop:'3px', paddingLeft:'10px'}}>Home</div>
           </div>
